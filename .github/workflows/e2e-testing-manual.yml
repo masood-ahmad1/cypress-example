@@ -1,4 +1,4 @@
-name: Lighthouse
+name: Manual Run Cypress from Github Actions
 
 # Run this workflow every time a new commit pushed to your repository
 on:
@@ -29,13 +29,13 @@ jobs:
         uses: actions/checkout@v2.4.2
       - name: npm install lighthouse
         run: npm install lighthouse
-        working-directory: CYPRESS_LIGHTHOUSE
+        working-directory: lighthouse
       - name: start testing
         run: npm run cypress:run:lighthouse
-        working-directory: CYPRESS_LIGHTHOUSE
+        working-directory: lighthouse
       - name: npm ci
         run: npm ci
-        working-directory: CYPRESS_LIGHTHOUSE/cypress
+        working-directory: lighthouse/cypress
       - name: start testing
         run: npm run cypress:run:stage
-        working-directory: CYPRESS_LIGHTHOUSE/cypress
+        working-directory: lighthouse/cypress
