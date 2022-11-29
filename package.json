@@ -1,0 +1,17 @@
+{
+    "name": "execute-modern",
+    "version": "1.0.0",
+    "description": "Do not install project related packages. Used to start a whole bunch of modern npm scripts at once.",
+    "scripts": {
+      "cypress:run:lighthouse": "npx lighthouse https://stage.moshtix.com.au/v2/ --view --output-path=./report.html --preset 'desktop'",
+      "cypress:run": "cypress run --headed --browser chrome",
+      "cypress:run:headless": "cypress run --browser chrome",
+      "cypress:run:stage": "npm run cypress:run:headless --spec **/*.js"
+    },
+    "devDependencies": {
+      "concurrently": "^5.0.0",
+      "cypress": "^10.11.0",
+      "lighthouse": "^9.6.8"
+    }
+  }
+  
