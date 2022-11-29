@@ -29,13 +29,13 @@ jobs:
         uses: actions/checkout@v2.4.2
       - name: npm install lighthouse
         run: npm install lighthouse
-        working-directory: CYPRESS_PRACTICE
+        working-directory: CYPRESS_LIGHTHOUSE
       - name: start testing
         run: npm run cypress:run:lighthouse
-        working-directory: CYPRESS_PRACTICE
+        working-directory: CYPRESS_LIGHTHOUSE
       - name: npm ci
         run: npm ci
-        working-directory: CYPRESS_PRACTICE/cypress
+        working-directory: CYPRESS_LIGHTHOUSE/cypress
       - name: start testing
         run: npm run cypress:run:stage
-        working-directory: CYPRESS_PRACTICE/cypress
+        working-directory: CYPRESS_LIGHTHOUSE/cypress
