@@ -1,4 +1,4 @@
-name: e2e manual
+name: Lighthouse
 
 # Run this workflow every time a new commit pushed to your repository
 on:
@@ -21,15 +21,21 @@ jobs:
     # Name the Job
     name: End to end testing
     # Set the type of machine to run on
-    runs-on: macos-12
+    runs-on: macos-latest
 
     steps:
       # Checks out a copy of your repository on the ubuntu-latest machine
       - name: Checkout code
         uses: actions/checkout@v2.4.2
+      - name: npm install lighthouse
+        run: npm install lighthouse
+        working-directory: CYPRESS_LIGHTHOUSE
+      - name: start testing
+        run: npm run cypress:run:lighthouse
+        working-directory: CYPRESS_LIGHTHOUSE
       - name: npm ci
         run: npm ci
-        working-directory: cypress_practice/cypress
+        working-directory: CYPRESS_LIGHTHOUSE/cypress
       - name: start testing
         run: npm run cypress:run:stage
-        working-directory: cypress_practice/cypress
+        working-directory: CYPRESS_LIGHTHOUSE/cypress
