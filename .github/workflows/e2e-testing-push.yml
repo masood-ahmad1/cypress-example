@@ -1,19 +1,7 @@
 name: Lighthouse
 
 # Run this workflow every time a new commit pushed to your repository
-on:
-  workflow_dispatch:
-    inputs:
-      logLevel:
-        description: 'Log level'
-        required: true
-        default: 'warning'
-        type: choice
-        options:
-          - info
-          - warning
-          - debug
-
+on: [push]
 jobs:
   # Set the job key. The key is displayed as the job name
   # when a job name is not provided
