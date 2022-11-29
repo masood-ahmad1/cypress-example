@@ -1,31 +1,17 @@
-name: e2e manual
+name: Cypress Tests
 
-# Run this workflow every time a new commit pushed to your repository
-on:
-  workflow_dispatch:
-    inputs:
-      logLevel:
-        description: 'Log level'
-        required: true
-        default: 'warning'
-        type: choice
-        options:
-          - info
-          - warning
-          - debug
+on: [push]
 
 jobs:
-  # Set the job key. The key is displayed as the job name
-  # when a job name is not provided
-  e2e-testing:
-    # Name the Job
-    name: End to end testing
-    # Set the type of machine to run on
-    runs-on: macos-latest
-
+  cypress-run:
+    runs-on: ubuntu-latest
     steps:
-      # Checks out a copy of your repository on the ubuntu-latest machine
       - name: Checkout
         uses: actions/checkout@v2
-      - name: start testing
-        run: npm run cypress:run:stage
+      # Install NPM dependencies, cache them correctly
+      # and run all Cypress tests
+      - name: Cypress run
+        uses: cypress-io/github-action@v2
+        with:
+          build: npm run build
+          start: npm start
