@@ -1,13 +1,13 @@
-name: Manual Run Cypress from Github Actions
+name: e2e manual
 
 # Run this workflow every time a new commit pushed to your repository
 on:
   workflow_dispatch:
     inputs:
       logLevel:
-        description: 'Log level'
+        description: "Log level"
         required: true
-        default: 'warning'
+        default: "warning"
         type: choice
         options:
           - info
@@ -21,21 +21,15 @@ jobs:
     # Name the Job
     name: End to end testing
     # Set the type of machine to run on
-    runs-on: macos-latest
+    runs-on: ubuntu-22.04
 
     steps:
       # Checks out a copy of your repository on the ubuntu-latest machine
       - name: Checkout code
         uses: actions/checkout@v2.4.2
-      - name: npm install lighthouse
-        run: npm install lighthouse
-        working-directory: lighthouse
-      - name: start testing
-        run: npm run cypress:run:lighthouse
-        working-directory: lighthouse
       - name: npm ci
         run: npm ci
-        working-directory: lighthouse/cypress
+        working-directory: cypress-example/cypress
       - name: start testing
         run: npm run cypress:run:stage
-        working-directory: lighthouse/cypress
+        working-directory: cypress-example/cypress

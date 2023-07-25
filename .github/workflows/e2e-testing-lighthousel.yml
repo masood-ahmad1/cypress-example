@@ -1,7 +1,19 @@
-name: Run Cypress e2e on every push
+name: Manual Run Cypress from Github Actions
 
 # Run this workflow every time a new commit pushed to your repository
-on: [push]
+on:
+  workflow_dispatch:
+    inputs:
+      logLevel:
+        description: 'Log level'
+        required: true
+        default: 'warning'
+        type: choice
+        options:
+          - info
+          - warning
+          - debug
+
 jobs:
   # Set the job key. The key is displayed as the job name
   # when a job name is not provided
