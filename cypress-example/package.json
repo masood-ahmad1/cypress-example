@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "cypress:open": "cypress open",
-    "cypress:run:stage": "npm run cypress:run:headless --browser chrome --spec **/*.js"
+    "cypress:run:stage": "npm run cypress:run:headless -- --config baseUrl=https://stage.moshtix.com.au/ --browser chrome --spec **/*.js"
   },
   "cypress-cucumber-preprocessor": {
     "nonGlobalStepDefinitions": true,
