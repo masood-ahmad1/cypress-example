@@ -5,9 +5,9 @@ on:
   workflow_dispatch:
     inputs:
       logLevel:
-        description: 'Log level'
+        description: "Log level"
         required: true
-        default: 'warning'
+        default: "warning"
         type: choice
         options:
           - info
@@ -21,7 +21,7 @@ jobs:
     # Name the Job
     name: End to end testing
     # Set the type of machine to run on
-    runs-on: macos-latest
+    runs-on: ubuntu-22.04
 
     steps:
       # Checks out a copy of your repository on the ubuntu-latest machine

@@ -5,11 +5,10 @@
   "main": "index.js",
   "scripts": {
     "cypress:open": "cypress open",
-    "cypress:run:stagetest": "npm run cypress:run:headless -- --config baseUrl=https://stage.moshtix.com.au/ --browser chrome --spec **/*.js",
+    "cypress:run:stage": "npm run cypress:run:headless --spec **/*.js",
     "cypress:run": "cypress run --headed --browser chrome",
-    "cypress:run:headless": "cypress run --browser chrome",
-    "cypress:run:stage": "npm run cypress:run:headless --spec **/*.js"
-  },
+    "cypress:run:headless": "cypress run --browser chrome"
+    },
   "cypress-cucumber-preprocessor": {
     "nonGlobalStepDefinitions": true,
     "stepDefinitions": "cypress/e2e/BDD_E2E",
