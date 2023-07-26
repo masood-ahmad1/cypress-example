@@ -27,8 +27,8 @@ jobs:
       # Checks out a copy of your repository on the ubuntu-latest machine
       - name: Checkout code
         uses: actions/checkout@v2.4.2
-      - name: npm install
-        run: npm install
+      - name: npm ci
+        run: npm ci
         working-directory: cypress-example/cypress
       - name: start testing
         run: npm run cypress:run:stage
