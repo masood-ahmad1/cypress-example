@@ -33,8 +33,8 @@ jobs:
       - name: start testing
         run: npm run cypress:run:lighthouse
         working-directory: lighthouse
-      - name: npm install
-        run: npm install
+      - name: npm ci
+        run: npm ci
         working-directory: lighthouse/cypress
       - name: start testing
         run: npm run cypress:run:stage
