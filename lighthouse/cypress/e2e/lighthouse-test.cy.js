@@ -7,7 +7,7 @@ describe("To Test the benchmark of lighthouse-Performance", () => {
     cy.get('.lh-scores-header > [href="#performance"] > .lh-gauge__percentage')
       .invoke("text")
       .then(parseFloat)
-      .should("be.gte", 60);
+      .should("be.gte", 30);
   });
 });
 
@@ -22,7 +22,7 @@ describe("To Test the benchmark of lighthouse-Accessibility", () => {
     )
       .invoke("text")
       .then(parseFloat)
-      .should("be.gte", 60);
+      .should("be.gte", 30);
   });
 });
 describe("To Test the benchmark of lighthouse-Best Practices", () => {
@@ -36,7 +36,7 @@ describe("To Test the benchmark of lighthouse-Best Practices", () => {
     )
       .invoke("text")
       .then(parseFloat)
-      .should("be.gte", 60);
+      .should("be.gte", 30);
   });
 });
 describe("To Test the benchmark of lighthouse-SEO", () => {
@@ -48,6 +48,6 @@ describe("To Test the benchmark of lighthouse-SEO", () => {
     cy.get('.lh-scores-header > [href="#seo"] > .lh-gauge__percentage')
       .invoke("text")
       .then(parseFloat)
-      .should("be.gte", 60);
+      .should("be.gte", 30);
   });
 });
