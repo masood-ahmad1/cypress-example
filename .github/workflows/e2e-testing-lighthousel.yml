@@ -1,4 +1,4 @@
-name: Manual Run Cypress from Github Actions
+name: e2e-lighthouse
 
 # Run this workflow every time a new commit pushed to your repository
 on:

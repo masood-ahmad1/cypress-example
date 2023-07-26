@@ -1,4 +1,4 @@
-name: e2e manual
+name: e2e manual cypress
 
 # Run this workflow every time a new commit pushed to your repository
 on:
