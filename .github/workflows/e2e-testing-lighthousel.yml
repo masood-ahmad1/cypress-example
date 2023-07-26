@@ -21,7 +21,7 @@ jobs:
     # Name the Job
     name: End to end testing
     # Set the type of machine to run on
-    runs-on: ubuntu-22.04
+    runs-on: macos-latest
 
     steps:
       # Checks out a copy of your repository on the ubuntu-latest machine
