@@ -31,5 +31,5 @@ jobs:
         run: npm ci
         working-directory: cypress-example/cypress
       - name: start testing
-        run: npm run cypress:run:stage
+        run: npm run cypress:run:stagetest
         working-directory: cypress-example/cypress
