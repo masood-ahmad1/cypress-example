@@ -29,7 +29,7 @@ jobs:
         uses: actions/checkout@v2.4.2
       - name: npm ci
         run: npm ci
-        working-directory: cypress-example/cypress
+        working-directory: cy-test/cypress
       - name: start testing
         run: npm run cypress:run:stage
-        working-directory: cypress-example/cypress
+        working-directory: cy-test/cypress
