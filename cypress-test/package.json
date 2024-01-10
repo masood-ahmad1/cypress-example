@@ -7,7 +7,7 @@
     "cypress:open": "cypress open",
     "cypress:run:stage": "npm run cypress:run:headless --spec **/*.js",
     "cypress:run": "cypress run --headed --browser chrome",
-    "cypress:run:headless": "cypress run --browser chrome"
+    "cypress:run:headless": "cypress run --browser electron"
   },
   "cypress-cucumber-preprocessor": {
     "nonGlobalStepDefinitions": true,
@@ -24,7 +24,7 @@
   "devDependencies": {
     "@types/cypress-cucumber-preprocessor": "^4.0.1",
     "cross-env": "^7.0.2",
-    "cypress": "^13.1.0",
+    "cypress": "^10.11.0",
     "cypress-cucumber-preprocessor": "^4.3.1",
     "cypress-iframe": "^1.0.1",
     "gmail-tester": "^1.3.5",
