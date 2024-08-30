@@ -1,4 +1,5 @@
 const { defineConfig } = require("cypress");
+const { it } = require("mocha");
 
 module.exports = defineConfig({
   chromeWebSecurity: false,
